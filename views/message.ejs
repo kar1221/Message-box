@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= locals.author %> | Message</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <%- include('../partials/header.ejs') %>
+    <main class="message">
+      <div class="message__message-box">
+        <h2 class="message__message-author"><%= author %></h2>
+        <p class="message__message-body"><%= message %></p>
+        <div class="message__message-footer">
+          <p class="message__message-date"><%= createdDate %></p>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script></script>
+</html>

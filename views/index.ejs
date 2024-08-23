@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Mini MessageBoard</title>
+  </head>
+  <body>
+    <%- include('../partials/header.ejs') %>
+    <main class="index-main">
+      <% locals.formattedMessages.forEach(message => { %>
+      <a class="message__message-box" href="<%= message.id %>">
+        <h2 class="message__message-author"><%= message.author %></h2>
+        <p class="message__message-body"><%= message.message %></p>
+        <div class="message__message-footer">
+          <p class="message__message-date"><%= message.createdDate %></p>
+        </div>
+      </a>
+      <% }); %>
+    </main>
+  </body>
+</html>

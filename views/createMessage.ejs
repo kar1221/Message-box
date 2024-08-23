@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Create New Message</title>
+  </head>
+  <body>
+    <%- include('../partials/header.ejs') %>
+    <main class="create-message__main">
+      <form action="/new" method="post" class="create-message__form">
+        <h2>Add new message</h2>
+        <label>
+          From
+          <input
+            type="text"
+            name="author"
+            placeholder="Marnie"
+            aria-placeholder="Marnie"
+            required
+            aria-required="true"
+          />
+        </label>
+        <label>
+          What are you going to share?
+          <textarea
+            name="message"
+            cols="20"
+            placeholder="Tell us anything!"
+            aria-placeholder="Tell us anything!"
+            required
+            aria-required="true"
+          ></textarea>
+        </label>
+        <button type="submit">Add</button>
+      </form>
+    </main>
+  </body>
+</html>

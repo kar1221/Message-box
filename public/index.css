@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('./preflight.css');
+
+:root {
+  --fonts: 'Roboto', sans-serif;
+  --neutral-50: #fafafa;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e5e5e5;
+  --neutral-300: #d4d4d4;
+  --neutral-400: #a3a3a3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+  --neutral-950: #0a0a0a;
+
+  --accent: #f59e0b;
+  --accent-lighter: #fbbf24;
+  --accent-darker: #d97706;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.header__logo {
+  font-family: var(--fonts);
+  font-size: 1.25rem;
+}
+
+.header__add-button {
+  font-family: var(--fonts);
+  border: none;
+  background-color: var(--accent-darker);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  color: var(--neutral-50);
+  transition: background-color 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.header__add-button:hover {
+  background-color: var(--accent);
+}
+
+.index-main {
+  display: flex;
+  flex-direction: column;
+  max-width: 750px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.message__message-box {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--fonts);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  padding: 1rem;
+  border-radius: 1.25rem;
+}
+
+.message__message-author {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--accent-darker);
+  margin-bottom: 0.25rem;
+}
+
+.message__message-body {
+  font-size: 1rem;
+  color: var(--neutral-900);
+  margin-bottom: 1rem;
+}
+
+.message__message-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.message__message-date {
+  font-size: 0.875rem;
+  color: var(--neutral-500);
+}
+
+.create-message__main {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-message__main form {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 480px;
+  height: max-content;
+  border-radius: 0.375rem;
+}
+
+.create-message__main h2 {
+  font-size: 1.5rem;
+  color: var(--accent-darker);
+  font-family: var(--fonts);
+  font-weight: 700;
+}
+
+.create-message__main input,
+.create-message__main textarea {
+  border: 2px solid var(--neutral-300);
+  font-family: var(--fonts);
+  outline: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  font-weight: normal;
+}
+
+.create-message__main textarea {
+  resize: vertical;
+  min-height: 240px;
+}
+
+.create-message__main label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: var(--fonts);
+  color: var(--neutral-600);
+  font-weight: 600;
+}
+
+.create-message__main button {
+  border: none;
+  background-color: var(--accent-darker);
+  color: var(--neutral-50);
+  font-family: var(--fonts);
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: background-color 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-radius: 0.5rem;
+}
+
+.create-message__main button:hover {
+  background-color: var(--accent);
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  font-family: var(--fonts);
+  gap: 0.875rem;
+}
+
+.error h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.error p {
+  font-size: 1.25rem;
+  width: 65ch;
+}
+
+.error a {
+  background-color: var(--accent-darker);
+  color: var(--neutral-50);
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 0.875rem;
+  font-size: 1.25rem;
+  transition: background-color 0.15s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.error a:hover {
+  background-color: var(--accent);
+}
